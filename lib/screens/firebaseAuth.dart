@@ -39,14 +39,15 @@ class _FireBaseAuthState extends State<FireBaseAuth> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'HELLO',
+                      "Dash+",
                       style: GoogleFonts.b612(
                           color: Colors.black,
                           fontSize: 50,
                           fontWeight: FontWeight.w700),
                     ),
                     Text(
-                      'Welcome to Medico!',
+                      "Hey!! It's me your Appointment buddy "
+                          "\nHow can I help you?",
                       style: GoogleFonts.b612(
                           color: Colors.indigo[800],
                           fontSize: 17,

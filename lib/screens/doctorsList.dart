@@ -87,7 +87,6 @@ class _DoctorsListState extends State<DoctorsList> {
                 onChanged: (String _searchKey) {
                   setState(
                     () {
-                      print('>>>' + _searchKey);
                       search = _searchKey;
                       _length = search.length;
                     },

@@ -9,7 +9,7 @@ class Carouselslider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 200,
       width: MediaQuery.of(context).size.width,
       child: CarouselSlider.builder(
         itemCount: bannerCards.length,
@@ -17,7 +17,7 @@ class Carouselslider extends StatelessWidget {
           return Container(
             //alignment:  Alignment.centerLeft,
             //width: MediaQuery.of(context).size.width,
-            height: 140,
+            height: 100,
             margin: EdgeInsets.only(left: 0, right: 0, bottom: 20),
             padding: EdgeInsets.only(left: 0),
             decoration: BoxDecoration(

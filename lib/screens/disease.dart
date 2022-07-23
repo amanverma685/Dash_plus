@@ -41,54 +41,58 @@ class _DiseaseState extends State<Disease> {
               return ListView(
                 physics: BouncingScrollPhysics(),
                 children: snapshot.data.docs.map((document) {
-                  return Container(
-                      padding: EdgeInsets.only(left: 10, right: 10, top: 0),
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 10,
-                      decoration: BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(
-                        color: Colors.black87,
-                        width: 0.2,
-                      ))),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => DiseaseDetail(
-                                      disease: document['Name'],
-                                    )),
-                          );
-                        },
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  document['Name'],
-                                  style: GoogleFonts.lato(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.black87,
+                  return Card(
+                    elevation: 4,
+                    child: Container(
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 0),
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height / 8,
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                          color: Colors.black87,
+                          width: 0.2,
+                        ))),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DiseaseDetail(
+                                        disease: document['Name'],
+                                      )),
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    document['Name'],
+                                    style: GoogleFonts.lato(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.black87,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  document['Symtomps'],
-                                  softWrap: false,
-                                  style: GoogleFonts.lato(
-                                      fontSize: 14, color: Colors.black54),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ));
+                                  Text(
+                                    document['smallDescription'],
+                                    softWrap: true,
+                                    maxLines: 3,
+                                    style: GoogleFonts.lato(
+                                        fontSize: 16, color: Colors.black54),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )),
+                  );
                 }).toList(),
               );
             }));

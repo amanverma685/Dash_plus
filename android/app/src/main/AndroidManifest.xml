@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:name="${applicationName}"
-        android:label="Medic.ly"
+        android:label="Dash+"
         android:icon="@mipmap/ic_launcher">
         <meta-data
             android:name="flutterEmbedding"

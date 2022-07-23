@@ -22,8 +22,8 @@ class _SearchListState extends State<SearchList> {
           stream: FirebaseFirestore.instance
               .collection('doctors')
               .orderBy('name')
-              .startAt(['Dr. ' + widget.searchKey]).endAt(
-                  ['Dr. ' + widget.searchKey + '\uf8ff']).snapshots(),
+              .startAt([widget.searchKey]).endAt(
+                  [ widget.searchKey + '\uf8ff']).snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (!snapshot.hasData)

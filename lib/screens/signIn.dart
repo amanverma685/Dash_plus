@@ -149,7 +149,7 @@ class _SignInState extends State<SignIn> {
               },
               textInputAction: TextInputAction.done,
               validator: (value) {
-                if (value.isEmpty) return 'Please enter the Passord';
+                if (value.isEmpty) return 'Please enter the Password';
                 return null;
               },
               obscureText: true,
@@ -217,24 +217,24 @@ class _SignInState extends State<SignIn> {
                         FlutterIcons.google_ant,
                         color: Colors.white,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+
+
+                        const snackBar = SnackBar(
+                          duration: Duration(milliseconds: 600),
+                          content: Text('Coming Soon!!!!'),
+                        );
+
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
+
+                      },
                     ),
                   ),
                   SizedBox(
                     width: 30,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.blue[900],
-                        borderRadius: BorderRadius.circular(32)),
-                    child: IconButton(
-                      icon: Icon(
-                        FlutterIcons.facebook_f_faw,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                    ),
-                  )
+
                 ],
               ),
             ),

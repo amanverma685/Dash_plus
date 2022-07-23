@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:health_and_doctor_appointment/firestore-data/appointmentHistoryList.dart';
+import 'package:health_and_doctor_appointment/firestore-data/myAppointmentList.dart';
 import 'package:health_and_doctor_appointment/screens/userSettings.dart';
 
 class UserProfile extends StatefulWidget {
@@ -276,7 +277,11 @@ class _UserProfileState extends State<UserProfile> {
                               height: 30,
                               child: TextButton(
                                 onPressed: () {},
-                                child: Text('View all'),
+                                child: ElevatedButton( child:Text("View All"),onPressed: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => MyAppointmentList()),
+                                ); }),
                               ),
                             ),
                           ),

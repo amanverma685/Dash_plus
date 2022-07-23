@@ -56,7 +56,7 @@ class _ExploreListState extends State<ExploreList> {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Card(
                     color: Colors.blue[50],
-                    elevation: 0,
+                    elevation: 4,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -80,8 +80,10 @@ class _ExploreListState extends State<ExploreList> {
                           //mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             CircleAvatar(
+                              foregroundImage: NetworkImage(doctor['image']),
+
                               backgroundColor: Colors.blue,
-                              radius: 25,
+                              radius: 35,
                             ),
                             SizedBox(
                               width: 20,
@@ -94,7 +96,7 @@ class _ExploreListState extends State<ExploreList> {
                                   doctor['name'],
                                   style: GoogleFonts.lato(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 17,
+                                    fontSize: 18,
                                     color: Colors.black87,
                                   ),
                                 ),
@@ -117,7 +119,7 @@ class _ExploreListState extends State<ExploreList> {
                                   children: [
                                     Icon(
                                       Typicons.star_full_outline,
-                                      size: 20,
+                                      size: 25,
                                       color: Colors.indigo[400],
                                     ),
                                     SizedBox(
@@ -127,7 +129,7 @@ class _ExploreListState extends State<ExploreList> {
                                       doctor['rating'].toString(),
                                       style: GoogleFonts.lato(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 15,
+                                        fontSize: 19,
                                         color: Colors.indigo,
                                       ),
                                     ),
